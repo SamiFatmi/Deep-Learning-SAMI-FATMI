@@ -131,3 +131,9 @@ dmypy.json
 # test and train data 
 Lab/original_data/test/test/
 Lab/original_data/train/train/
+Lab/experiment_small_data/test/
+Lab/experiment_small_data/train/
+Lab/experiment_small_data/val/
+Lab/experiment_tiny_data/test/
+Lab/experiment_tiny_data/train/
+Lab/experiment_tiny_data/val/
