@@ -30,7 +30,7 @@ To create and study the models we will proceed as follows :
 
 We started by making a plot of randomly chosen images from the original data folder as follows : 
 <image1.png> 
-<img src="./Lab/assets/image1.png" alt="Shape"
+<img src="./assets/image1.png" alt="Shape"
 	title="Shape" width="50%" />
 
 ### Splitting the data : 
