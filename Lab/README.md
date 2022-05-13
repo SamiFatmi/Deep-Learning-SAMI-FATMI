@@ -36,7 +36,7 @@ We started by making a plot of randomly chosen images from the original data fol
 
 Data was split following these numbers : 
 <img src="./assets/image2.png" alt="Shape"
-	title="Shape" width="80%" />
+	title="Shape" width="50%" />
 
 ### Data balance : 
 
@@ -59,7 +59,7 @@ As we see on the following plot, the data is well shuffled.
 
 The initial sizes of the pictures are as shown in this graph : 
 <img src="./assets/image5.png" alt="Shape"
-	title="Shape" width="80%" />
+	title="Shape" width="50%" />
 
 The graph shows that the majority of the images tend to be close to a square shape. We will resize the images to a 1:1 ratio images. 
 
@@ -69,7 +69,7 @@ We will resize our images to 200x200 without cropping. We will not crop our pict
 
 Images under 100pixel in height or weights will be removed. 
 <img src="./assets/image6.png" alt="Shape"
-	title="Shape" width="80%" />
+	title="Shape" width="40%" />
 
 ### Visualizing the data : 
 
@@ -81,7 +81,7 @@ Checking the quality of the resized images :
 
 After scaling the data and creating the datasets, we created the X and y arrays for each of the folders. To keep track of our X and y arrays we will store them in a dictionary we call scaled_data_dict. 
 
-To augment our data, we go through the x_train data and produce 5 new imeges through the ImageDataGenerator iterator object. 
+To augment our data, we go through the x_train data and produce 5 new images for each image in our X_train through the ImageDataGenerator iterator object. 
 
 ### Visualizing the augmented data to control quality : 
 
@@ -101,19 +101,19 @@ The parameters we will be tuning are :
 We ran a test first to find the best dropout rate for each of the datasets, and the results are as follows : 
 #### Small data : 
 <img src="./assets/image9.png" alt="Shape"
-	title="Shape" width="80%" />
-    
+	title="Shape" width="40%" />
+
 #### Augmented small data : 
 <img src="./assets/image10.png" alt="Shape"
-	title="Shape" width="80%" />
-    
+	title="Shape" width="40%" />
+
 #### Tiny data : 
 <img src="./assets/image11.png" alt="Shape"
-	title="Shape" width="80%" />
-    
+	title="Shape" width="40%" />
+
 #### Augmented tiny data : 
 <img src="./assets/image12.png" alt="Shape"
-	title="Shape" width="80%" />
+	title="Shape" width="40%" />
 
 Then we ran 2 nested loops to cross test learning rates (0.001,0.01,0.1)and number of layers from 2 to 4. The models are then saved with model name containing the parameters as well as the validation accuracy to help us keep track of different models, as follows : 
 <img src="./assets/image13.png" alt="Shape"
@@ -147,12 +147,12 @@ The best performing model for the tiny dataset will remain the same as the previ
 ### Evaluating the best model on test data :
 #### Small data model : 
 <img src="./assets/image14.png" alt="Shape"
-	title="Shape" width="80%" />
+	title="Shape" width="50%" />
 
 #### Tiny data model : 
 
 <img src="./assets/image15.png" alt="Shape"
-	title="Shape" width="80%" />
+	title="Shape" width="50%" />
 
 
 ## Transfer learning with InceptionV3 :
