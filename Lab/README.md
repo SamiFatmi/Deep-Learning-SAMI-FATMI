@@ -36,8 +36,9 @@ We started by making a plot of randomly chosen images from the original data fol
 ### Splitting the data : 
 
 Data was split following these numbers : 
+
 <img src="./assets/image2.png" alt="Shape"
-	title="Shape" width="50%" />
+	title="Shape" width="30%" />
 
 ### Data balance : 
 
