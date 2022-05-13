@@ -1,6 +1,6 @@
 # Laboration Deep Learning
 
-In this project we will experiment and compare CNN models for classifying dog and cat pictures. The data provided can be found <here> and it's a dataset of approximately 27500 pictures of dogs and cats. 
+In this project we will experiment and compare CNN models for classifying dog and cat pictures. The data provided can be found [here](https://www.kaggle.com/datasets/biaiscience/dogs-vs-cats) and it's a dataset of approximately 27500 pictures of dogs and cats. 
 
 To create and study the models we will proceed as follows : 
 - EDA : 
