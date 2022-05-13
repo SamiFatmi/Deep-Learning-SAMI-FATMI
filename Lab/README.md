@@ -99,16 +99,19 @@ The parameters we will be tuning are :
 - learning rate
 
 We ran a test first to find the best dropout rate for each of the datasets, and the results are as follows : 
-- Small data : 
+#### Small data : 
 <img src="./assets/image9.png" alt="Shape"
 	title="Shape" width="80%" />
-- Augmented small data : 
+    
+#### Augmented small data : 
 <img src="./assets/image10.png" alt="Shape"
 	title="Shape" width="80%" />
-- Tiny data : 
+    
+#### Tiny data : 
 <img src="./assets/image11.png" alt="Shape"
 	title="Shape" width="80%" />
-- Augmented tiny data : 
+    
+#### Augmented tiny data : 
 <img src="./assets/image12.png" alt="Shape"
 	title="Shape" width="80%" />
 
@@ -145,7 +148,7 @@ The best performing model for the tiny dataset will remain the same as the previ
 #### Small data model : 
 <img src="./assets/image14.png" alt="Shape"
 	title="Shape" width="80%" />
-    
+
 #### Tiny data model : 
 
 <img src="./assets/image15.png" alt="Shape"
