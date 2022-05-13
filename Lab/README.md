@@ -29,6 +29,7 @@ To create and study the models we will proceed as follows :
 ### Data analysis : 
 
 We started by making a plot of randomly chosen images from the original data folder as follows :  
+
 <img src="./assets/image1.png" alt="Shape"
 	title="Shape" width="80%" />
 
@@ -58,6 +59,7 @@ As we see on the following plot, the data is well shuffled.
 ### Size : 
 
 The initial sizes of the pictures are as shown in this graph : 
+
 <img src="./assets/image5.png" alt="Shape"
 	title="Shape" width="50%" />
 
