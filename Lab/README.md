@@ -23,7 +23,7 @@ To create and study the models we will proceed as follows :
     - Evaluating all models on val data 
     - Evaluating the best model on test data 
     - Transfer learning : 
-        - Training the models and evaluate 
+        - Training and evaluating the models 
 
 ## 1. EDA 
 ### Data analysis : 
