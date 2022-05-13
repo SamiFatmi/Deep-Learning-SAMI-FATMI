@@ -28,21 +28,22 @@ To create and study the models we will proceed as follows :
 ## 1. EDA 
 ### Data analysis : 
 
-We started by making a plot of randomly chosen images from the original data folder as follows : 
-<image1.png> 
+We started by making a plot of randomly chosen images from the original data folder as follows :  
 <img src="./assets/image1.png" alt="Shape"
-	title="Shape" width="50%" />
+	title="Shape" width="80%" />
 
 ### Splitting the data : 
 
 Data was split following these numbers : 
-<images2.png>
+<img src="./assets/image2.png" alt="Shape"
+	title="Shape" width="80%" />
 
 ### Data balance : 
 
 To check the data balance we made a pie chart of the proportions of cat images and dog images in the dataset. The data is perfectly balanced since we're making sure we take 50% of each while splitting the data.
 
-<image3.png>
+<img src="./assets/image3.png" alt="Shape"
+	title="Shape" width="80%" />
 
 ### Data shuffling : 
 
@@ -50,13 +51,15 @@ To control if the data is well shuffled, it is easier to make a lineplot of the 
 
 As we see on the following plot, the data is well shuffled.
 
-<image4.png>
+<img src="./assets/image4.png" alt="Shape"
+	title="Shape" width="80%" />
 
 ## 2. Image treatment : 
 ### Size : 
 
 The initial sizes of the pictures are as shown in this graph : 
-<image5.png>
+<img src="./assets/image5.png" alt="Shape"
+	title="Shape" width="80%" />
 
 The graph shows that the majority of the images tend to be close to a square shape. We will resize the images to a 1:1 ratio images. 
 
@@ -65,12 +68,14 @@ When resizing we don't want to have a large portion of our data that has a lower
 We will resize our images to 200x200 without cropping. We will not crop our pictures because we will be performing data augmentation later in this process, and the compound of cropping and the translation effect may have produce images where the subject is completely out of the image.
 
 Images under 100pixel in height or weights will be removed. 
-<image6.png>
+<img src="./assets/image6.png" alt="Shape"
+	title="Shape" width="80%" />
 
 ### Visualizing the data : 
 
 Checking the quality of the resized images : 
-<image7.png>
+<img src="./assets/image7.png" alt="Shape"
+	title="Shape" width="80%" />
 
 ### Data augmentation : 
 
@@ -82,7 +87,8 @@ To augment our data, we go through the x_train data and produce 5 new imeges thr
 
 Here we make a plot of images from the augmented data to check quality and labeling : 
 
-<image8.png>
+<img src="./assets/image8.png" alt="Shape"
+	title="Shape" width="80%" />
 
 ## 3. Model training :
 ### Hyper parameter tuning :
@@ -94,16 +100,21 @@ The parameters we will be tuning are :
 
 We ran a test first to find the best dropout rate for each of the datasets, and the results are as follows : 
 - Small data : 
-<image9.png>
+<img src="./assets/image9.png" alt="Shape"
+	title="Shape" width="80%" />
 - Augmented small data : 
-<image10.png>
+<img src="./assets/image10.png" alt="Shape"
+	title="Shape" width="80%" />
 - Tiny data : 
-<image11.png>
+<img src="./assets/image11.png" alt="Shape"
+	title="Shape" width="80%" />
 - Augmented tiny data : 
-<image12.png>
+<img src="./assets/image12.png" alt="Shape"
+	title="Shape" width="80%" />
 
 Then we ran 2 nested loops to cross test learning rates (0.001,0.01,0.1)and number of layers from 2 to 4. The models are then saved with model name containing the parameters as well as the validation accuracy to help us keep track of different models, as follows : 
-<image13.png> 
+<img src="./assets/image13.png" alt="Shape"
+	title="Shape" width="80%" />
 
 From the initial results, the best parameters are in the following table : 
 
@@ -132,9 +143,13 @@ The best performing model for the tiny dataset will remain the same as the previ
 
 ### Evaluating the best model on test data :
 #### Small data model : 
-<image14.png>
+<img src="./assets/image14.png" alt="Shape"
+	title="Shape" width="80%" />
+    
 #### Tiny data model : 
-<image15.png>
+
+<img src="./assets/image15.png" alt="Shape"
+	title="Shape" width="80%" />
 
 
 ## Transfer learning with InceptionV3 :
