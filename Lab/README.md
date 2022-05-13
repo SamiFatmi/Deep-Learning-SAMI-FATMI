@@ -147,43 +147,74 @@ The best performing model for the tiny dataset will remain the same as the previ
 ### Evaluating the best model on test data :
 #### Small data model : 
 <img src="./assets/image14.png" alt="Shape"
-	title="Shape" width="50%" />
+	title="Shape" width="30%" />
 
 #### Tiny data model : 
 
 <img src="./assets/image15.png" alt="Shape"
-	title="Shape" width="50%" />
+	title="Shape" width="30%" />
 
 
 ## Transfer learning with InceptionV3 :
 
+An inception network is a deep neural network with an architectural design that consists of repetitive elements called Inception modules.
+
+Network in Network was a paper published in the year 2014 by Min Lin, and it highlighted the increase in representational power of neural networks through the integration of internal complex structures within networks.
+
+The network is known to have gotten its name after the famous movie Inception released back in 2010. 
+
+### How does it work : 
+A few principles guided the researchers when designing the Inception network : 
+
+- Highly efficient deep neural networks need to be large. A deep neural network that's truly efficient must be larger-meaning it must contain more layers and units in its various layers.
+- Convolutional neural networks are capable of detecting details at different scales due to their biological visual cortex functions. This increases the visual cortex's capability to discover larger visual patterns, which allows it to better recognize objects. As a result, multiscale convolutional neural networks tend to learn more.
+- Considering that neurons that fire together, wire together.(The Hebbian Principle)
+
+
+In practice, an Inception network is made out of inception modules. Each inception module consists of :
+- Input layer
+- 1x1 convolution layer
+- 3x3 convolution layer
+- 5x5 convolution layer
+- Max pooling layer
+- Concatenation layer
+
+### 1x1 convolution layers : 
+Also known as “Network In Network” and was introduced in 2013, the 1x1 convolutional layers's main purpose is to reduce the dimension of data going through the network.
+
+## 3x3 and 5x5 Convolutions :
+Before the inception model, researchers had to test a variation of kernels and filter sizes. With the Inception model there is no need anymore to make such decisions, instead we will use varying filter sizes ( 1x1, 3x3, 5x5).
+
+These 2 types of layers' main purpose is  to let the network learn multiple spatial patterns at different scales as a result of the varying convolution filter sizes.
+
+## Benefits of the inception modules 
+Efficient utilisation of computing resource with minimal increase in computation load for the high-performance output of an Inception network.
+
+Ability to extract features from input data at varying scales through the utilisation of 1x1, 3x3 and 5x5 convolutional filter sizes. 
+
+1x1 conv filters can learn cross channels patterns, which contributes to the overall feature extractions capabilities of the network.
+
+
+## Conclusion 
+The inception network can be easily understood when broken down into its components. It is a good network for data science practicioners to learn more about the intuitions as well as the techniques the researchers might have or are working on developing.
+
 ### Training the models and evaluate :
 
+#### Small data : 
+<img src="./assets/image17.png" alt="Shape"
+	title="Shape" width="30%" />
 
 
-
-## Transfer Learning : Inception 
-
-### 1. Introduction : 
-
-AlexNet, an image network that won the 2012 ImageNet best-of-breed competition, is also popularly used for different activities, such as object-detection, segmentation, human pose calculation, video type interpretation, object tracking, and superresolution.
-
-These network architectures motivated research efforts that led to improved convolutional neural networks. Among these networks, VGGNet and GoogLeNet delivered results in 2014 that surpassed those of all other networks in ImageNet classification.
-
-VGGNet has the benefit of being very simple to configure and implement, but its computational constraints need to be carefully assessed, and Inception doesn't.
-
-Inception is also substantially less expensive than VGGNet and its higher performing successors. This allows it to operate effectively in big-data scenarios, where a large amount of information needs to be processed at low cost or in scenarios where memory and computational power is limited, for instance, in mobile vision.
+#### Tiny data : 
+<img src="./assets/image16.png" alt="Shape"
+	title="Shape" width="30%" />
 
 
-### 2. General Design Principles :
-### 3. Factorizing Convolutions with Large Filter Size : 
-#### 3.1. Factorization into smaller convolutions :
-#### 3.2. Spatial Factorization into Asymmetric Convolutions :
-### 4. Utility of Auxiliary Classifiers :
-### 5. Efficient Grid Size Reduction :
-### 6. Inception-v2 :
-### 7. Model Regularization via Label Smoothing :
-### 8. Training Methodology :
-### 9. Performance on Lower Resolution Input :
-### 10. Experimental Results and Comparisons :
-### 11. Conclusions :
+# Conclusion : 
+
+Through out this project we learned several things about convolutional neural networks : 
+- The bigger the data the better: The conv models we trained locally performed way better. 
+- Small data can give ambiguous results : The tiny data was giving unreasonably ambiguous results. 
+- The more layers the better: If we can afford to train models with a larger number of layers then we should go for it. Our model with 5 layers was by far the best one of the models we trained locally and gave a 14% accuracy increase.
+
+Although if there is an already open source model that one can use with transfer learning then that is worthwhile. Those models are already trained to 99.99%, they are extremely big, and the fact that it is possible to freeze their parameters and only train the MLP parameters that we implement on top of the transfer learning model gives us the oportunity to train extremely big models relatively very fast.
