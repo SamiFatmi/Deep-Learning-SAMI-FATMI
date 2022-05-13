@@ -68,6 +68,7 @@ When resizing we don't want to have a large portion of our data that has a lower
 We will resize our images to 200x200 without cropping. We will not crop our pictures because we will be performing data augmentation later in this process, and the compound of cropping and the translation effect may have produce images where the subject is completely out of the image.
 
 Images under 100pixel in height or weights will be removed. 
+
 <img src="./assets/image6.png" alt="Shape"
 	title="Shape" width="40%" />
 
@@ -182,12 +183,12 @@ In practice, an Inception network is made out of inception modules. Each incepti
 ### 1x1 convolution layers : 
 Also known as “Network In Network” and was introduced in 2013, the 1x1 convolutional layers's main purpose is to reduce the dimension of data going through the network.
 
-## 3x3 and 5x5 Convolutions :
+### 3x3 and 5x5 Convolutions :
 Before the inception model, researchers had to test a variation of kernels and filter sizes. With the Inception model there is no need anymore to make such decisions, instead we will use varying filter sizes ( 1x1, 3x3, 5x5).
 
 These 2 types of layers' main purpose is  to let the network learn multiple spatial patterns at different scales as a result of the varying convolution filter sizes.
 
-## Benefits of the inception modules 
+### Benefits of the inception modules 
 Efficient utilisation of computing resource with minimal increase in computation load for the high-performance output of an Inception network.
 
 Ability to extract features from input data at varying scales through the utilisation of 1x1, 3x3 and 5x5 convolutional filter sizes. 
@@ -195,10 +196,10 @@ Ability to extract features from input data at varying scales through the utilis
 1x1 conv filters can learn cross channels patterns, which contributes to the overall feature extractions capabilities of the network.
 
 
-## Conclusion 
+### Conclusion 
 The inception network can be easily understood when broken down into its components. It is a good network for data science practicioners to learn more about the intuitions as well as the techniques the researchers might have or are working on developing.
 
-### Training the models and evaluate :
+## Training and evaluating the models :
 
 #### Small data : 
 <img src="./assets/image17.png" alt="Shape"
